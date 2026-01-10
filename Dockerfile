@@ -30,6 +30,11 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update \
+    && apt-get install -y nodejs npm \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 # STM tools usually end up here
 ENV PATH="/opt/st/stm32cubeclt_1.20.0"
 
