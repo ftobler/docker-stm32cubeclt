@@ -26,7 +26,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 ENV STM32CLT_DIR="/opt/st/stm32cubeclt_1.20.0"
-ENV PATH="${STM32CLT_DIR}"
+ENV PATH="${PATH}:${STM32IDE_DIR}"
 
 RUN if [ ! -d "$STM32CLT_DIR" ]; then \
     echo "Error: $STM32CLT_DIR is missing! The installation failed."; \
