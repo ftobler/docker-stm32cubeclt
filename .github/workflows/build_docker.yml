@@ -11,10 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download file from Google Drive
-        uses: ChrisTitus/google-drive-download@main
-        with:
-          # st-stm32cubeclt_1.20.0_26822_20251117_1245_amd64.deb_bundle.sh.zip
-          # https://drive.google.com/file/d/1zery3q9J_yYap6Ae_7QGSK8iojKNInVB/view?usp=drive_link
-          id: '1zery3q9J_yYap6Ae_7QGSK8iojKNInVB'  # Replace with your file ID
-          destination: '.'
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Download STM32CubeCLT release asset
+        run: |
+          curl -L \
+            -o st-stm32cubeclt.zip \
+            https://github.com/ftobler/docker-STM32CubeCLT/releases/download/st-stm32cubeclt_1.20.0_26822_20251117_1245_amd64.deb_bundle.sh/st-stm32cubeclt_1.20.0_26822_20251117_1245_amd64.deb_bundle.sh.zip
+
+      - name: Verify download
+        run: |
+          ls -lh st-stm32cubeclt.zip
+          unzip -l st-stm32cubeclt.zip
