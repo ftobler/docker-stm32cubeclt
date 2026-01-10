@@ -18,7 +18,7 @@ jobs:
         run: |
           curl -L \
             -o st-stm32cubeclt.zip \
-            https://github.com/ftobler/docker-STM32CubeCLT/releases/download/st-stm32cubeclt_1.20.0_26822_20251117_1245_amd64.deb_bundle.sh/st-stm32cubeclt_1.20.0_26822_20251117_1245_amd64.deb_bundle.sh.zip
+            https://github.com/ftobler/docker-STM32CubeCLT/releases/download/test/st-stm32cubeclt_1.20.0_26822_20251117_1245_amd64.deb_bundle.sh.zip
 
       - name: Verify download
         run: |
