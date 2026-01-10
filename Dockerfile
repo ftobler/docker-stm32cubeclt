@@ -26,7 +26,7 @@ RUN apt-get update \
     && mv *.sh st-stm32cubeclt_amd64.deb_bundle.sh \
     && chmod +x *.sh \
     && ./st-stm32cubeclt_amd64.deb_bundle.sh \
-    && rm *.sh && \
+    && rm *.sh \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
