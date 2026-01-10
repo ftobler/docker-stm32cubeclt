@@ -1,15 +1,5 @@
 FROM ubuntu:24.04
 
-# Basic deps STM tools tend to need
-# RUN apt-get update && apt-get install -y \
-#     ca-certificates \
-#     curl \
-#     unzip \
-#     xz-utils \
-#     libusb-1.0-0 \
-#     && rm -rf /var/lib/apt/lists/*
-
-
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LICENSE_ALREADY_ACCEPTED=1
 
