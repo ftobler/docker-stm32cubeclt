@@ -20,12 +20,12 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV LICENSE_ALREADY_ACCEPTED=1
 
 # Make it executable and run it
-RUN apt-get update && apt-get install unzip -y \
-    unzip *.zip \
-    rm *.zip \
-    mv *.sh st-stm32cubeclt_amd64.deb_bundle.sh \
+RUN apt-get update && apt-get install unzip -y && \
+    unzip *.zip && \
+    rm *.zip && \
+    mv *.sh st-stm32cubeclt_amd64.deb_bundle.sh && \
     chmod +x *.sh && \
-    st-stm32cubeclt_amd64.deb_bundle.sh \
+    ./st-stm32cubeclt_amd64.deb_bundle.sh && \
     rm *.sh
 
 # STM tools usually end up here
