@@ -23,7 +23,7 @@ ENV LICENSE_ALREADY_ACCEPTED=1
 RUN apt-get update && apt-get install unzip -y \
     unzip *.zip \
     rm *.zip \
-    mv *.sh st-stm32cubeclt_amd64.deb_bundle.sh
+    mv *.sh st-stm32cubeclt_amd64.deb_bundle.sh \
     chmod +x *.sh && \
     st-stm32cubeclt_amd64.deb_bundle.sh \
     rm *.sh
