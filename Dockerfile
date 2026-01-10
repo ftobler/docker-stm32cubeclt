@@ -20,7 +20,7 @@ RUN apt-get update \
 
 RUN apt-get update \
     && wget https://github.com/ftobler/docker-STM32CubeCLT/releases/download/test/st-stm32cubeclt_1.20.0_26822_20251117_1245_amd64.deb_bundle.sh.zip \
-    && mv *.zip st-stm32cubeclt_amd64.deb_bundle.zip
+    && mv *.zip st-stm32cubeclt_amd64.deb_bundle.zip \
     && unzip *.zip \
     && rm *.zip \
     && mv *.sh st-stm32cubeclt_amd64.deb_bundle.sh \
