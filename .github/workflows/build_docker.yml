@@ -38,4 +38,4 @@ jobs:
           pull: false
           push: true
           platforms: linux/amd64
-          tags: ${{ secrets.DOCKER_USERNAME }}/STM32CubeCLT:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/stm32cubeclt:latest
